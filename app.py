@@ -59,17 +59,17 @@ def show_overview(reviews):
 
     This project builds a complete pipeline for understanding customer sentiment from real Amazon product reviews:
 
-    1. **Data Engineering** — Sourced 15,587 reviews and product metadata from the Amazon Reviews 2023 dataset,
+    1. Data Engineering — Sourced 15,587 reviews and product metadata from the Amazon Reviews 2023 dataset,
        designed a normalized 3-table SQL schema (Products, Reviews, Customers), and wrote analytical SQL queries
        (joins, GROUP BY, window functions, CASE WHEN logic).
-    2. **Sentiment Analysis (Model Comparison)** — Compared a lexicon-based approach (VADER) against a
+    2. Sentiment Analysis (Model Comparison) — Compared a lexicon-based approach (VADER) against a
        transformer-based approach (DistilBERT). VADER had higher raw accuracy (89.9%), but DistilBERT had far
        better recall on negative reviews (93% vs. 51%) — the metric that actually matters if the goal is catching
        dissatisfied customers.
-    3. **Topic Modeling & Keyword Analysis** — Used LDA to pull out 6 recurring complaint themes, ran comparative
+    3. Topic Modeling & Keyword Analysis — Used LDA to pull out 6 recurring complaint themes, ran comparative
        word-frequency analysis to find complaint-specific vocabulary (up to 9x more common in negative reviews),
        and built a network graph of how complaint concepts relate to each other.
-    4. **Live Deployment** — This app, which lets you test the trained sentiment model on any text in real time
+    4. Live Deployment — This app, which lets you test the trained sentiment model on any text in real time
        and explore the underlying dataset.
 
     Use the sidebar to get to the predictor, dashboard, and dataset explorer.
